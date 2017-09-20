@@ -9,10 +9,10 @@ console.log('Five siblings answer is ' + fiveSiblings);
 
 if (fiveSiblings === 'n' || fiveSiblings === 'no') {
   // Tell the user the answer is correct
-  alert('You got it! I only have 4 sisters: Averon, Norseen, Chana, and Avery.');
+  alert('You got it! I only have 4 sisters (no brothers): Averon, Norseen, Chana, and Avery.');
 } else {
   // Tell the user the anser is incorrect
-  alert('Almost. I have 4 sisters, and I\'m fourth in birth order.');
+  alert('Almost. I have 4 sisters (no brothers), and I\'m fourth in birth order.');
 }
 
 // Question 2
@@ -62,3 +62,28 @@ if (codeFellows === 'n' || codeFellows === 'no') {
   // User is correct
   alert('Yep. And to think I nearly didn\'t...');
 }
+
+var triesRemaining = 4;
+var brotherAnswer = 0;
+
+// Question 6
+while (triesRemaining > 0) {
+  var userGuess = prompt('Let\'s see if you were paying attention. How many brothers do I have? Please enter digits only.');
+  console.log('Correct number of brothers: ' + brotherAnswer + ';\n user entered: ' + userGuess);
+
+  if (userGuess == brotherAnswer) {
+    alert('I feel truly treasured. You got it!');
+    break;
+  } else if (userGuess > brotherAnswer) {
+    triesRemaining--;
+    alert('I\'ll forgive you ' + triesRemaining + ' more times. \n Hint: too high');
+  } else {
+    triesRemaining--;
+    alert('I\'ll forgive you ' + triesRemaining + ' more times. \n Hint: too low');
+  }
+}
+
+//With strict quality, 0 evaluated to 'too low' and loop didn't exit. Worked with loose equality.
+
+//Communicate number of questions, number of tries remaining, how answer should be given, good information...learn more
+//console log: q, correct, user answer
