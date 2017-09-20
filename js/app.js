@@ -55,7 +55,7 @@ if (lift === 'n' || lift === 'no') {
 var codeFellows = prompt('Am I glad I came to Code Fellows?').toLowerCase();
 console.log('Code Fellows answer is ' + codeFellows);
 
-if (codeFellows === 'n' || codeFellows === 'no')  {
+if (codeFellows === 'n' || codeFellows === 'no') {
   // User is incorrect
   alert('Aw...I hope you\'re just testing my code. I\'m very glad I came.');
 } else {
