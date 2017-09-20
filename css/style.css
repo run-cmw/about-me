@@ -7,7 +7,7 @@
 body {
   background-color: rgb(237, 211, 166);
   width: 500px;
-  align-self: center;
+  margin: auto;
 }
 
 h1 {
@@ -27,6 +27,6 @@ ul {
   width: 300px
 }
 p {
-  padding: 30px;
+  padding: 10px 30px;
   width: 400px;
 }
