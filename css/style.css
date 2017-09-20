@@ -1,7 +1,32 @@
 * {
-  color: red;
+  color: rgb(91, 6, 6);
+  line-height: 1.2em;
+  margin: 10px;
 }
 
-a {
-  align: left;
+body {
+  background-color: rgb(237, 211, 166);
+  width: 500px;
+  align-self: center;
+}
+
+h1 {
+  color: rgb(224, 80, 80);
+  background-color: rgb(91, 6, 6);
+  padding: 30px;
+}
+
+#woodworking {
+  float: right;
+  transform: rotate(90deg);
+  padding: 30px 20px;
+}
+
+ul {
+  padding: 20px;
+  width: 300px
+}
+p {
+  padding: 30px;
+  width: 400px;
 }
