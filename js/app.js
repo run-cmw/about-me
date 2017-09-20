@@ -1,89 +1,104 @@
 'use strict';
 
+var score = 0;
+
 var userName = prompt('Thanks for visiting my About Me page! What\'s your name?');
-alert('Hi, ' + userName + ', nice to meet you! Let\'s see if you can guess the correct answers to the following five questions about me.');
+alert('Hello, ' + userName + '! Let\'s see if you can guess the answers to the following 7 prompts about me. Please only enter yes/no or y/n.');
 
 // Question 1
-var fiveSiblings = prompt('Do I have 5 sisters?').toLowerCase();
-console.log('Five siblings answer is ' + fiveSiblings);
+var fiveSiblings = prompt('Do I have 5 siblings?').toLowerCase();
+console.log('Correct five siblings answer is no\nuser entered: ' + fiveSiblings);
 
 if (fiveSiblings === 'n' || fiveSiblings === 'no') {
   // Tell the user the answer is correct
-  alert('You got it! I only have 4 sisters (no brothers): Averon, Norseen, Chana, and Avery.');
-} else {
+  alert('You got it! I only have 4 siblings. My sisters are Averon, Norseen, Chana, and Avery.');
+  score++;
+} else if (fiveSiblings === 'y' || fiveSiblings === 'yes') {
   // Tell the user the anser is incorrect
-  alert('Almost. I have 4 sisters (no brothers), and I\'m fourth in birth order.');
+  alert('Almost. I have 4 siblings. My sisters are Averon, Norseen, Chana, and Avery.');
+} else {
+  alert('Sorry, your input is invalid.');
 }
 
 // Question 2
 var soggyBread = prompt('Do I love eating soggy bread?').toLowerCase();
-console.log('Soggy bread answer is ' + soggyBread);
+console.log('Correct soggy bread answer is no\nuser entered: ' + soggyBread);
 
 if (soggyBread === 'n' || soggyBread === 'no') {
   // User is correct
   alert('And you know this! No gravy on my biscuits, my pizza can\'t set in grease, no sauce dripping on my burger bun.');
-} else {
+  score++;
+} else if (soggyBread === 'y' || soggyBread === 'yes') {
   // User is incorrect
   alert('-_- You cannot be serious.');
+} else {
+  alert('Sorry, your input is invalid.');
 }
 
 // Question 3
 var eating = prompt('Am I eating right now?').toLowerCase();
-console.log('Currently eating answer is ' + eating);
+console.log('Correct eating answer is yes\nuser entered: ' + eating);
 
 if (eating === 'n' || eating === 'no') {
   // User is incorrect
   alert('Silly rabbit. I\'m always eating!');
-} else {
+} else if (eating === 'y' || eating === 'yes') {
   // User is correct
   alert('Darn skippy! Want some?');
+  score++;
+} else {
+  alert('Sorry, your input is invalid.');
 }
 
 // Question 4
 var lift = prompt('Did I hit the gym this morning?').toLowerCase();
-console.log('Hit the gym answer is ' + lift);
+console.log('Correct hit the gym answer is yes\nuser entered: ' + lift);
 
 if (lift === 'n' || lift === 'no') {
   // User is incorrect
   alert('Nah - and if that\'s ever true, please make sure I\'m okay.');
-} else {
+} else if (lift === 'y' || lift === 'yes') {
   // User is correct
   alert('Mhmmm...Always. Be. Lifting.');
+  score++;
+} else {
+  alert('Sorry, your input is invalid.');
 }
 
 // Question 5
 var codeFellows = prompt('Am I glad I came to Code Fellows?').toLowerCase();
-console.log('Code Fellows answer is ' + codeFellows);
+console.log('Correct Code Fellows answer is yes\nuser entered: ' + codeFellows);
 
 if (codeFellows === 'n' || codeFellows === 'no') {
   // User is incorrect
   alert('Aw...I hope you\'re just testing my code. I\'m very glad I came.');
-} else {
+} else if (codeFellows === 'y' || lift === 'yes') {
   // User is correct
-  alert('Yep. And to think I nearly didn\'t...');
+  alert('Yup. And to think I nearly didn\'t...');
+  score++;
+} else {
+  alert('Sorry, your input is invalid.');
 }
 
-var triesRemaining = 4;
+var brotherTriesRemaining = 4;
 var brotherAnswer = 0;
 
 // Question 6
-while (triesRemaining > 0) {
-  var userGuess = prompt('Let\'s see if you were paying attention. How many brothers do I have? Please enter digits only.');
-  console.log('Correct number of brothers: ' + brotherAnswer + ';\n user entered: ' + userGuess);
+while (brotherTriesRemaining > 0) {
+  var brotherGuess = parseInt(prompt('Let\'s see if you were paying attention. How many brothers do I have? Please enter digits.'), 10);
+  console.log('Correct number of brothers: ' + brotherAnswer + '\nuser entered: ' + brotherGuess);
 
-  if (userGuess == brotherAnswer) {
+  if (brotherGuess === brotherAnswer) {
     alert('I feel truly treasured. You got it!');
     break;
-  } else if (userGuess > brotherAnswer) {
-    triesRemaining--;
-    alert('I\'ll forgive you ' + triesRemaining + ' more times. \n Hint: too high');
+  } else if (brotherGuess > brotherAnswer) {
+    brotherTriesRemaining--;
+    alert('I\'ll forgive you ' + brotherTriesRemaining + ' more times.\n Hint: too high');
   } else {
-    triesRemaining--;
-    alert('I\'ll forgive you ' + triesRemaining + ' more times. \n Hint: too low');
+    brotherTriesRemaining--;
+    alert('I\'ll forgive you ' + brotherTriesRemaining + ' more times.\n Hint: too low');
   }
 }
 
-//With strict quality, 0 evaluated to 'too low' and loop didn't exit. Worked with loose equality.
-
-//Communicate number of questions, number of tries remaining, how answer should be given, good information...learn more
-//console log: q, correct, user answer
+// Question 7
+alert('I hope you enjoyed that as much as I did. You\'re worthy of learning more.');
