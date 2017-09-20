@@ -1,6 +1,5 @@
 'use strict';
 
-
 var userName = prompt('Thanks for visiting my About Me page! What\'s your name?');
 alert('Hi, ' + userName + ', nice to meet you! Let\'s see if you can guess the correct answers to the following five questions about me.');
 
