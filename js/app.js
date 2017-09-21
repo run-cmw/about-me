@@ -77,7 +77,7 @@ console.log('Correct Code Fellows answer is yes\nuser entered: ' + codeFellows);
 if (codeFellows === 'n' || codeFellows === 'no') {
   // User is incorrect
   alert('Aw...I hope you\'re just testing my code. I\'m very glad I came.');
-} else if (codeFellows === 'y' || lift === 'yes') {
+} else if (codeFellows === 'y' || codeFellows === 'yes') {
   // User is correct
   alert('Yup. And to think I nearly didn\'t...');
   score++;
