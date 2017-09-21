@@ -1,6 +1,6 @@
 'use strict';
 
-var score = 0;
+var score = 0; // what's this about?! global vs local? shouldn't global work anywhere?
 
 var userName = prompt('Thanks for visiting my About Me page! What\'s your name?');
 alert('Hello, ' + userName + '! Let\'s see if you can guess the answers to the following 7 prompts about me. Please only enter yes/no or y/n.');
