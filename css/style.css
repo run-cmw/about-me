@@ -20,6 +20,7 @@ h1 {
   float: right;
   transform: rotate(90deg);
   padding: 30px 20px;
+  width: 200px;
 }
 
 ul {
