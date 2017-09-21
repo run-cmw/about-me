@@ -101,10 +101,13 @@ function brothers() {
   var brotherAnswer = 0;
 
   while (brotherTriesRemaining > 0) {
-    var brotherGuess = parseInt(prompt('Let\'s see if you were paying attention. How many brothers do I have? Please enter digits.'), 10);
+    var brotherGuess = parseInt(prompt('Let\'s see if you were paying attention. How many brothers do I have? Please enter digits.'));
     console.log('Correct number of brothers: ' + brotherAnswer + '\nuser entered: ' + brotherGuess);
 
-    if (brotherGuess === brotherAnswer) {
+    if (isNaN(brotherGuess)) {
+      brotherTriesRemaining--;
+      alert('Sorry, your input is invalid. You have ' + brotherTriesRemaining + ' more tries.');
+    } else if (brotherGuess === brotherAnswer) {
       alert('I feel truly treasured. You got it!');
       score++;
       break;
@@ -150,12 +153,12 @@ function nameRecall() {
 }
 
 
-siblings();
-soggy();
-food();
-weights();
-cf();
+// siblings();
+// soggy();
+// food();
+// weights();
+// cf();
 brothers();
-nameRecall();
+// nameRecall();
 
 alert('You guessed ' + score + ' correctly out of 7! I hope you enjoyed that as much as I did. You\'re worthy of learning more, ' + userName + '.');
