@@ -3,6 +3,11 @@
 var score = 0;
 
 var userName = prompt('Thanks for visiting my About Me page! What\'s your name?');
+
+if (!userName) {
+  userName = prompt('C\'mon, don\'t be like that. What\'s your name?');
+}
+
 alert('Hello, ' + userName + '! Let\'s see if you can guess the answers to the following 7 prompts about me. Please only enter yes/no or y/n.');
 
 // Question 1
@@ -114,7 +119,7 @@ while (sisterTriesRemaining > 0 && !correct) {
     if (sisterGuess === sisters[i]) {
       //I wanna iterate through my arraaaaay! No pipes!!!!
       console.log(i);
-      alert('Yep! She\'s one. Here are all of their names: ' + sisters);
+      alert('Yep! She\'s one. Here are all of their names again: ' + sisters);
       correct = true;
       break;
     }
