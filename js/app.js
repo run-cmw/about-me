@@ -95,6 +95,7 @@ while (brotherTriesRemaining > 0) {
 
   if (brotherGuess === brotherAnswer) {
     alert('I feel truly treasured. You got it!');
+    score++;
     break;
   } else if (brotherGuess > brotherAnswer) {
     brotherTriesRemaining--;
@@ -120,6 +121,7 @@ while (sisterTriesRemaining > 0 && !correct) {
       //I wanna iterate through my arraaaaay! No pipes!!!!
       console.log(i);
       alert('Yep! She\'s one. Here are all of their names again: ' + sisters);
+      score++;
       correct = true;
       break;
     }
