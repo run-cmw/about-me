@@ -4,7 +4,7 @@ var score = 0;
 
 var userName = prompt('Thanks for visiting my About Me page! What\'s your name?');
 
-if (!userName) {
+while (!userName) {
   userName = prompt('C\'mon, don\'t be like that. What\'s your name?');
 }
 
