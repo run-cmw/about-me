@@ -148,7 +148,7 @@ function nameRecall() {
   }
 
   if (sisterTriesRemaining === 0) {
-    alert('Sorry, you\'re out of guesses. Here they are again: ' + sisters);
+    alert('Sorry, you\'re out of guesses. Here they are again: ' + sisters.join(', '));
   }
 }
 
