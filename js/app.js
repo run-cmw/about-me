@@ -133,7 +133,6 @@ function nameRecall() {
 
     for (var i = 0; i < sisters.length; i++) {
       if (sisterGuess === sisters[i]) {
-        //I wanna iterate through my arraaaaay! No pipes!!!!
         alert('Yep! She\'s one. Here are all of their names again: ' + sisters.join(', '));
         score++;
         correct = true;
@@ -153,12 +152,12 @@ function nameRecall() {
 }
 
 
-// siblings();
-// soggy();
-// food();
-// weights();
-// cf();
+siblings();
+soggy();
+food();
+weights();
+cf();
 brothers();
-// nameRecall();
+nameRecall();
 
 alert('You guessed ' + score + ' correctly out of 7! I hope you enjoyed that as much as I did. You\'re worthy of learning more, ' + userName + '.');
